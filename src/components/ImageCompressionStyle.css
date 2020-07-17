@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic:ital@1&family=Hind+Guntur:wght@300&family=Montserrat:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fileElem {
+  display: none;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      246.02deg,
+      rgba(153, 229, 245, 0.208) -38.16%,
+      rgba(204, 31, 31, 0.4) 121.06%
+    ),
+    rgba(0, 55, 250, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+
+.box {
+  display: flex;
+
+  background: linear-gradient(88.45deg, #305aed -46.31%, #b2ffd6 199.3%),
+    #c42021;
+  border-radius: 25px;
+  transform-origin: center;
+  width: 70%;
+  height: 70%;
+  transform: translate(20%, 20%);
+  box-shadow: 0px 0px 15px 0px #f9f9f9;
+}
+
+.left-box,
+.right-box {
+  position: relative;
+  width: 50%;
+  /* background-color: #fefefe; */
+  height: 100%;
+}
+
+.heading {
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 5%;
+  width: 5%;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.04em;
+}
+
+span {
+  text-decoration: underline;
+  position: absolute;
+  color: white;
+  top: 25%;
+  left: 6%;
+  width: 100%;
+  font-family: "Gentium Basic", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+}
+
+.list {
+  position: absolute;
+  color: white;
+  top: 38%;
+  left: 10%;
+  width: 100%;
+  font-family: "Hind Guntur", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 40px;
+  /* or 111% */
+  list-style-position: inside;
+
+  letter-spacing: 0.01em;
+}
+
+.file-container {
+  position: absolute;
+  top: 70%;
+  left: 14%;
+  /* width: 100%; */
+}
+
+input {
+  /* appearance: none; */
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.fileSelect {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: max-content;
+  padding: 5px;
+  background: linear-gradient(205.96deg, #064cff -55.04%, #770b0b 265.74%),
+    #1254ff;
+  border-radius: 15px;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Hind Guntur", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.image {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  border-radius: 10px;
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.active {
+  position: absolute;
+  transition: all 0.5s ease-out;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -30%);
+  width: 1500px;
+  height: 1500px;
+  z-index: 2;
+  /* cursor: pointer; */
+}
+
+.compress {
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.compressBtn {
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
+  background: linear-gradient(205.96deg, #064cff -55.04%, #770b0b 265.74%),
+    #1254ff;
+  /* outline: none; */
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  display: none;
+}
+
+.compressBtn > span {
+  text-decoration: none;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  font-size: 24px;
+  font-family: "Hind Guntur", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.download {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  z-index: 10;
+  transform-origin: center;
+  transform: translate(50%, -50%);
+}
+
+.downloadBtn {
+  width: 100%;
+  background: linear-gradient(205.96deg, #064cff -55.04%, #770b0b 265.74%),
+    #1254ff;
+  padding: 20px 50px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  /* background: transparent; */
+  cursor: pointer;
+  font-size: 24px;
+  font-family: "Hind Guntur", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+  transition: all 1s ease-out;
+  display: none;
+}
