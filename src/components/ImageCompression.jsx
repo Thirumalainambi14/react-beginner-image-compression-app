@@ -1,5 +1,4 @@
 import React, { createRef } from "react";
-import ReactDOM from "react-dom";
 
 import brokenImage from "./images/broken.png";
 
@@ -103,7 +102,7 @@ class ImageCompression extends React.Component {
                 ref={this.filename}
               />
               <a
-                href="#"
+                href={this.state.downloadLink}
                 onClick={this.fileSelect}
                 id="fileSelect"
                 className="fileSelect"
@@ -115,7 +114,7 @@ class ImageCompression extends React.Component {
               <a
                 className="compressBtn"
                 ref={this.compress}
-                href=""
+                href={this.state.downloadLink}
                 onClick={(e) => {
                   e.preventDefault();
                   this.setState({ compressClicked: true, toggle: false });
@@ -130,7 +129,6 @@ class ImageCompression extends React.Component {
                   }
 
                   let targ = e.target;
-                  console.log(this.state);
                   const options = {
                     maxSizeMB: 1,
                     maxWidthOrHeight: 500,
@@ -146,7 +144,6 @@ class ImageCompression extends React.Component {
                       (x) => {
                         output = x;
                         const downloadLink = URL.createObjectURL(output);
-                        console.log(downloadLink);
                         this.setState({ downloadLink: downloadLink });
                         this.image.current.src = downloadLink;
                         targ.href = downloadLink;
